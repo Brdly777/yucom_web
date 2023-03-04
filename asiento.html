@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Asientos</title>
+</head>
+<nav class="navbar" id="nav">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-1 h1" id="proyect-name">Yucom</span>
+    <a href=""><button type="submit" id="back" class="btn btn-secondary">Regresar</button></a>
+  </div>
+</nav>
+<body class="body" id="body">
+  <div id="title">
+    <h2>ASIENTOS</h2>
+    <button type="button" id="btnAdd">Añadir</button>
+  </div>
+  <div class="modal" id="modalAdd">
+    <div class="form-content">
+      <div class="btn-close-form" onclick="closeModalAdd()">X</div>
+      <div class="form-body">
+        <form id="formAdd">
+          <input type="hidden" name="id" value="0">
+          <div class="control">
+            <label>Numero de Asiento: </label>
+            <input type="number" name="numero">
+          </div>
+          <div class="control">
+            <label>Descripcion: </label>
+            <input type="text" name="descripcion">
+          </div>
+        </form>
+      </div>
+      <div class="form-footer">
+        <button type="submit" id="btnCancel" onclick="closeModalAdd()">Cancelar</button>
+        <button type="submit" id="btnSave" onclick="createAsiento()">Guardar</button>
+      </div>
+      <span id="msgFormAdd" class="msg-error"></span>
+    </div>
+  </div>
+    <div class="modal" id="modalEdit">
+      <div class="form-content">
+        <div class="btn-close-form" onclick="closeModalEdit()">X</div>
+        <div class="form-body">
+          <form id="formEdit">
+            <input id="id" type="hidden" name="id">
+            <div class="control">
+              <label>Numero de Asiento: </label>
+              <input id="numero" type="number" name="numero">
+            </div>
+            <div class="control">
+              <label>Descripcion: </label>
+              <input id="descripcion" type="text" name="descripcion">
+            </div>
+          </form>
+        </div>
+        <div class="form-footer">
+            <button type="submit" id="btnCancel" onclick="closeModalEdit()">Cancelar</button>
+            <button type="submit" id="btnSave" onclick="updateAsiento()">Guardar</button>
+        </div>
+        <span id="msgFormEdit" class="msg-error"></span>
+      </div>
+    </div>
+  
+    <div class="modal" id="modalConfirm">
+      <div class="form-content">
+      <div class="btn-close-form" onclick="closeModalConfirm()">X</div>
+      <div class="form-body">
+        <h3>Eliminar</h3>
+        <p>¿Estas seguro de eliminar este Asiento?</p>
+      </div>
+      <div class="form-footer">
+        <button type="submit" onclick="confirmDelete(false)">No</button>
+        <button type="submit" onclick="confirmDelete(true)">Si</button>
+      </div>
+    </div>
+  </div>
+  <div class="alert" id="alert">Algo sucedió..</div>
+  <div id="asientosList" class="asientos-list"></div>
+
+  <script src="./asiento.js"></script>
+</body>
+</html>

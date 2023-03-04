@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Establecimientos</title>
+</head>
+<nav class="navbar" id="nav">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-1 h1" id="proyect-name">Yucom</span>
+    <a href="./home.html"><button type="submit" id="back" class="btn btn-secondary">Regresar</button></a>
+  </div>
+</nav>
+<body class="body" id="body">
+  <div id="title">
+    <h2>ESTABLECIMIENTOS</h2>
+    <button type="button" id="btnAdd">Añadir</button>
+  </div>
+  <div class="modal" id="modalAdd">
+    <div class="form-content">
+      <div class="btn-close-form" onclick="closeModalAdd()">X</div>
+      <div class="form-body">
+        <form id="formAdd">
+          <input type="hidden" name="id" value="0">
+          <div class="control">
+            <label>RFC: </label>
+            <input id="rfc" type="text" name="rfc">
+          </div>
+          <div class="control">
+            <label>Fotografia: </label>
+            <input id="fotografia" type="text" name="fotografia" placeholder="URL">
+          </div>
+          <div class="control">
+            <label>Nombre: </label>
+            <input id="nombre" type="text" name="nombre">
+          </div>
+          <div class="control">
+            <label>Descripcion: </label>
+            <input id="descripcion" type="text" name="descripcion">
+          </div>
+        </form>
+      </div>
+      <div class="form-footer">
+        <button type="button" id="btnCancel" onclick="closeModalAdd()">Cancelar</button>
+        <button type="button" id="btnSave" onclick="createEstablecimiento()">Guardar</button>
+      </div>
+      <span id="msgFormAdd" class="msg-error"></span>
+    </div>
+  </div>
+    <div class="modal" id="modalEdit">
+      <div class="form-content">
+        <div class="btn-close-form" onclick="closeModalEdit()">X</div>
+        <div class="form-body">
+          <form id="formEdit">
+            <input id="id" type="hidden" name="id">
+            <div class="control">
+              <label>RFC: </label>
+              <input id="rfc" type="text" name="rfc">
+            </div>
+            <div class="control">
+              <label>Fotografia: </label>
+              <input id="fotografia" type="text" name="fotografia" placeholder="URL">
+            </div>
+            <div class="control">
+              <label>Nombre: </label>
+              <input id="nombre" type="text" name="nombre">
+            </div>
+            <div class="control">
+              <label>Descripcion: </label>
+              <input id="descripcion" type="text" name="descripcion">
+            </div>
+          </form>
+        </div>
+        <div class="form-footer">
+            <button type="button" id="btnCancel" onclick="closeModalEdit()">Cancelar</button>
+            <button type="button" id="btnSave" onclick="updateEstablecimiento()">Guardar</button>
+        </div>
+        <span id="msgFormEdit" class="msg-error"></span>
+      </div>
+    </div>
+  
+    <div class="modal" id="modalConfirm">
+      <div class="form-content">
+      <div class="btn-close-form" onclick="closeModalConfirm()">X</div>
+      <div class="form-body">
+        <h3>Eliminar</h3>
+        <p>¿Estas seguro de eliminar este Establecimiento?</p>
+      </div>
+      <div class="form-footer">
+        <button type="button" onclick="confirmDelete(false)">No</button>
+        <button type="button" onclick="confirmDelete(true)">Si</button>
+      </div>
+    </div>
+  </div>
+  <div class="alert" id="alert">Algo sucedió..</div>
+  <div id="establecimientosList" class="establecimientos-list"></div>
+
+  <script src="./establecimiento.js"></script>
+</body>
+</html>

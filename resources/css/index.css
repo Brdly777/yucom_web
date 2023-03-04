@@ -1,0 +1,147 @@
+#nav{
+    background-color: red;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.3);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 100%;
+}
+.body{
+        font-family: 'Poppins', sans-serif;
+}
+#nav-text2{
+    color: white;
+    align-items: center;
+  }
+#proyect-name{
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+#back{
+    background-color: red;
+    border-color: red;
+    font-weight:600;
+}
+#body {
+    font: Poppins;
+    background-color:  #ffffff;
+  }
+#login-card{
+    width:770px;
+    border-radius: 25px;
+    margin:20px auto;
+    border: 0;
+}
+#text-forgot{
+    align-items: center;
+    font-size: 17px;
+    color: aqua;
+    font-weight:600;
+}
+#add-event{
+    align-items: center;
+    font-size: 27px;
+    color: rgb(0, 0, 0);
+    font-weight:600;
+}
+#text-center{
+    font-weight: bold;
+    color: #404040;
+    font-size: 50px;
+}
+#text-center2{
+    text-align: center;
+    font-size: 14px;
+    color: #777777;
+}
+#email{
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #272727;
+}
+#password{
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #272727;
+}
+#name{
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #272727;
+}
+#texts1{
+    float: left;
+}
+#secondName{
+    width: 327px;
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #272727;
+}
+#texts2{
+    float: right;
+}
+#thirdName{
+    width: 327px;
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #272727;
+}
+#texts3{
+    float: left;
+}
+#username{
+    width: 327px;
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #272727;
+}
+#texts4{
+    float: right;
+}
+#phone{
+    width: 327px;
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #272727;
+}
+#exampleInput{
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #272727;
+    font-family: 'Poppins', sans-serif;
+}
+#button{
+    border-radius:30px;
+    background-color: red;
+}
+#btn{
+    position: absolute; 
+    bottom: -35px; 
+    padding: 5px;
+    margin: 0px 55px;
+    align-items: center;
+    border-radius: 5px;
+}
+#container{
+  margin-top:25px;
+}
+  
+.btn-circle.btn-sm { 
+    width: 40px; 
+    height: 40px; 
+    padding: 2px 0px; 
+    border-radius: 25px; 
+    font-size: 14px; 
+    text-align: center;        
+    margin: 8px;
+    font-family: 'Poppins', sans-serif;
+}
